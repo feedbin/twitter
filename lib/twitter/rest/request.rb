@@ -35,7 +35,7 @@ module Twitter
 
       # @return [Array, Hash]
       def perform
-        response = http_client.headers(@headers).public_send(@request_method, @uri.to_s, request_options)
+        response = http_client.headers(@headers).public_send(@request_method, @uri.to_s, **request_options)
         response_body = response.body.empty? ? '' : symbolize_keys!(response.parse)
         response_headers = response.headers
         fail_or_return_response_body(response.code, response_body, response_headers)

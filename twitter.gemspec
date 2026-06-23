@@ -4,9 +4,11 @@ require 'twitter/version'
 
 Gem::Specification.new do |spec|
   spec.add_dependency 'addressable', '~> 2.3'
+  spec.add_dependency 'base64', '~> 0.2'
   spec.add_dependency 'buftok', '~> 0.2.0'
+  spec.add_dependency 'cgi', '~> 0.5'
   spec.add_dependency 'equalizer', '~> 0.0.11'
-  spec.add_dependency 'http', '~> 5.0'
+  spec.add_dependency 'http', '~> 6.0'
   spec.add_dependency 'http-form_data', '~> 2.0'
   spec.add_dependency 'http_parser.rb', '~> 0.6.0'
   spec.add_dependency 'memoizable', '~> 0.4.0'
@@ -21,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.licenses = %w[MIT]
   spec.name = 'twitter'
   spec.require_paths = %w[lib]
-  spec.required_ruby_version = '>= 2.4'
+  spec.required_ruby_version = '>= 3.2'
   spec.summary = spec.description
   spec.version = Twitter::Version
 end

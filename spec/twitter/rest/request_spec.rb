@@ -41,7 +41,7 @@ describe Twitter::REST::Request do
         end
         it 'requests with given timeout settings' do
           stub_post('/1.1/statuses/update.json').with(body: {status: 'Update'}).to_return(body: fixture('status.json'), headers: {content_type: 'application/json; charset=utf-8'})
-          expect_any_instance_of(HTTP::Client).to receive(:timeout).with(connect: 2, read: 2, write: 3).and_call_original
+          expect_any_instance_of(HTTP::Session).to receive(:timeout).with(connect: 2, read: 2, write: 3).and_call_original
           @client.update('Update')
         end
       end

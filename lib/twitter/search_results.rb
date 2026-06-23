@@ -1,4 +1,5 @@
-require 'cgi'
+require 'cgi/core'
+require 'cgi/escape'
 require 'twitter/enumerable'
 require 'twitter/rest/request'
 require 'twitter/utils'

@@ -1,5 +1,7 @@
 require 'addressable/uri'
 require 'base64'
+require 'cgi/core'
+require 'cgi/escape'
 require 'simple_oauth'
 
 module Twitter

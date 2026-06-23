@@ -9,6 +9,7 @@ group :development do
 end
 
 group :test do
+  gem 'benchmark'
   gem 'coveralls', '>= 0.8.23'
   gem 'rspec', '>= 2.14'
   gem 'rubocop', '>= 0.46'
